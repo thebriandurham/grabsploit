@@ -21,6 +21,13 @@ Voila! It's in your working directory.
 
 An inline `less` (or less-like feature) is on the to-do. So, in the future you can peak at the code, decide whether to *grab the sploit* or go peak at other results, and so on. 
 
+### Disclaimer: Truncated Titles
+One of the things that always annoys me about searchsploit & msfconsole's search feature is the full titles & paths that overflow the terminal line. This results in difficult to read output, where I typically sit there and resize the terminal and re-run the search until the results are displayed legibly. 
+
+***As it is*** `grabsploit` truncates titles that are longer than 64 characters long (roughly the amount of characters needed to fully fill a line in **my** terminal dimensions when I'm working. This setting can be changed in **main.rs** by updating the TITLE_CUTOFF value.
+
+In the future, I plan to have this value be calculated at runtime to make things easier, or to just not truncate if the terminal is wide enough (see To Do section below).
+
 ## Building
 1. Follow instructions [here](https://www.rust-lang.org/tools/install) to install rust if you haven't already
 2. From project directory, run `cargo build` 
@@ -32,6 +39,8 @@ To use: simply run grabsploit with your desired searchsploit search term as its 
 
 For multiword searches, wrap your search term in quotes:
 `grabsploit "eternal blue"
+
+![Example Usage](https://github.com/thebriandurham/grabsploit/blob/master/screenshots/grabsploit_02.png)
 
 ## To Do
 [In no particular order]
