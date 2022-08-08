@@ -18,7 +18,8 @@ use std::path::Path;
 use std::process::{Command, Stdio};
 
 // Constants
-const TITLE_CUTOFF: usize = 64;
+const TITLE_CUTOFF: usize = 64; 
+// Change above value as desired until auto width calculation is implemented
 
 /// Structs
 
